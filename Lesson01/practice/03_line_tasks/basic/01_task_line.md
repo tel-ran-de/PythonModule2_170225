@@ -15,8 +15,15 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
-```
+мое решение виктор
+a = int(input("a: "))
+b = int(input("b: "))
+
+area = a * b
+perimetr = (a + b) * 2
+print("Периметр=", perimetr)
+print("Площадь=", area)
+
 
 ---
 
