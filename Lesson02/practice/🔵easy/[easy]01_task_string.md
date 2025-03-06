@@ -14,9 +14,10 @@
 
 ### Решение задачи
 
-```python
-string = input("Введите произвольный текст: ")
-# TODO: you code here...
+string = "Подготовка"
+first=string[0]
+last=string[-1]
+print(first,last)
 ```
 
 ---
