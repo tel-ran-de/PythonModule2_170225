@@ -15,7 +15,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+a = int(input("Geben Sie bitte die Seite a ein: "))
+b = int(input("Geben Sie bitte die Seite b ein: "))
+
+umfang = 2 * (a + b)
+fläche = a * b
+
+print("Umfang:", umfang)
+print("Fläche:", fläche)
 ```
 
 ---
