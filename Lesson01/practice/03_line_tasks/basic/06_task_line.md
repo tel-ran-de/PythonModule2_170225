@@ -17,7 +17,11 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+etage_nummer = int(input("Geben Sie der Wohnungsnummer ein: "))
+
+floor = (etage_nummer - 1) //5 + 1
+
+print(floor)
 ```
 
 ---
