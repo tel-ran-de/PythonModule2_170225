@@ -15,7 +15,15 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+x1 = int(input("Geben Sie x1 ein: "))
+x2 = int(input("Geben Sie x2 ein: "))
+y1 = int(input("Geben Sie y1 ein: "))
+y2 = int(input("Geben Sie y2 ein: "))
+
+abstand = ((x2-x1)**2 +(y2-y1)**2)**0.5
+
+
+print(f"Die Entfernung zwieschen den Punkten beträgt:{abstand:.1f}")
 ```
 
 ---
