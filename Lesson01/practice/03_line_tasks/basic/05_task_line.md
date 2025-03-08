@@ -11,10 +11,20 @@
 ```python
 a = 5
 b = 7
-print("a =", a, "b =", b)  # Выводит a = 5 b = 7
-# Тут ваш код
-print("a =", a, "b =", b)  # Должно вывести a = 7 b = 5
-# Примечание: код самих print'ов не менять!
+
+temp = a
+a = b
+b = temp
+
+print("a =", a)
+print("b =", b)
+
+a = 5
+b = 7
+
+a, b = b, a
+print("a =", a)
+print("b =", b)
 ```
 
 ---
