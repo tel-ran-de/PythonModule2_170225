@@ -18,7 +18,11 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+h, a, b = map(int, input("Geben Sie h, a, b mit lehr Zeichen ein: ").split())
+
+tage = ((h - b - 1) // (a - b)) + 1
+
+print(tage)
 ```
 
 ---
