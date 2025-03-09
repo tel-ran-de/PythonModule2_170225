@@ -15,9 +15,11 @@
 
 ### Решение задачи
 
-```python
 text = "Вася самый умный! Вася лучше всех! И ждет его успех!"
-# TODO: you code here...
+
+text =text.replace("!",".")
+
+print(text)
 ```
 
 ---
