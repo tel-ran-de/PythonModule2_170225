@@ -15,8 +15,11 @@
 ### Решение задачи
 
 ```python
-text = ...
-# TODO: you code here...
+text = "Борбуйск"
+
+zahl = text.lower().count("б")
+
+print(zahl)
 ```
 
 ---
