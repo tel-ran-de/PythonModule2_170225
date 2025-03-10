@@ -15,7 +15,12 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+zahl =int(input("Gebe dein Zahl ein: "))
+
+if zahl % 10 ==5:
+    print("Ja")
+else:
+    print("nein")
 ```
 
 ---
