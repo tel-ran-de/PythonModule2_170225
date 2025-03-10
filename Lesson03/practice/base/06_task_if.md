@@ -15,7 +15,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+a = int(input("x: "))
+b = int(input("y: "))
+c = int(input("z: "))
+
+if a + b > c and a + c > b and b + c > a:
+    print("yes")
+else:
+    print("no")
 ```
 
 ---
