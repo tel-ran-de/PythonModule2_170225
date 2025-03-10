@@ -1,5 +1,5 @@
-text = "Борбуйск"
+text = "Бобруйск"
 
-num = text.lower().count("б")
+num = text.count("б")
 
 print(num)
