@@ -19,6 +19,14 @@
 
 ```python
 # TODO: you code here...
+buyer_money = int(input())
+item_price = int(input())
+
+if buyer_money >= item_price:
+    print(buyer_money - item_price)
+else:
+    print("Денег недостаточно")
+
 ```
 
 ---
