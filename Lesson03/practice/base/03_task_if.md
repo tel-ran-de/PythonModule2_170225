@@ -18,7 +18,13 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+geldboerse =int(input("Euro: "))
+preis =int (input("Kosten: "))
+
+if geldboerse >= preis:
+    print(geldboerse - preis)
+else:
+    print("Wenig Geld")
 ```
 
 ---
