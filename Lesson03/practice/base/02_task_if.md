@@ -15,7 +15,12 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+zahl =int(input("Zahl: "))
+
+if zahl % 3 ==0 or zahl % 5 == 0:
+    print("ja")
+else:
+    print("nein")
 ```
 
 ---
