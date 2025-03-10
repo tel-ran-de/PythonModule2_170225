@@ -14,9 +14,11 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
+number= int(input("Число:"))
+if number % 3 == 0 and number % 5 == 0:
+    print ("Да")
+else:
+    print("Нет")
 
 ---
 
