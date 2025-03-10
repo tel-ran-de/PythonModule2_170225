@@ -17,9 +17,12 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
+money = int(input("Количество денег:"))
+coast = int(input("Стоимость товара:"))
+if money > coast :
+    print (money- coast)
+elif money < coast :
+    print ("Денег недостаточно")
 
 ---
 
