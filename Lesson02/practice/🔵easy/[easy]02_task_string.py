@@ -1,7 +1,7 @@
-name = input("Имя: ")
-surname = input("Фамилия: ")
+first_name = input("Введите имя: ").strip()
+last_name = input("Введите фамилию: ").strip()
 
-name = name.capitalize()
-surname = surname.capitalize()
+formatted_first_name = first_name.capitalize()
+formatted_last_name = last_name.capitalize()
 
-print(name, surname)
+print(formatted_first_name, formatted_last_name)
