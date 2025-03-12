@@ -18,7 +18,14 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("n: "))
+m = int(input("m: "))
+k = int(input("k: "))
+
+if (k % m == 0 or k % n == 0) and k < n * m:
+    print("Yes")
+else:
+    print("No")
 ```
 
 ---
