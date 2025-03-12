@@ -3,7 +3,7 @@ b = int(input())
 c = int(input())
 d = int(input())
 
-if a % 2 != 0 and b % 2 == 0 and c % 2 == 0 and b % 2 != 0 :
+if (a + b) % 2 == (c + d)  % 2    :
     print("Да")
 else:
     print("Нет")
