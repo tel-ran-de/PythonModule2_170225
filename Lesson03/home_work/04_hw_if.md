@@ -19,8 +19,17 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
-```
+k = int(input("Enter the number of balls: "))
+
+can_you_buy = False
+for n in range(k // 5 + 1):
+    if (k - 5 * n) % 3 == 0:
+        can_you_buy = True
+        break
+if can_you_buy:
+    print("Yes")
+else:
+    print("No")
 
 ---
 
