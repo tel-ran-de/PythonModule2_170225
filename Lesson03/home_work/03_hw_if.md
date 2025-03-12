@@ -21,7 +21,16 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+square_x1 = int(input("координаты клетки 1 x:"))
+square_y1 = int(input("координаты клетки 1 y:"))
+
+square_x2 = int(input("координаты клетки 2 x:"))
+square_y2 = int(input("координаты клетки 2 y:"))
+
+if (square_x1 + square_y1) % 2 == 0 and (square_x2 + square_y2) % 2 == 0:
+    print("Yes")
+else:
+    print("No")
 ```
 
 ---
