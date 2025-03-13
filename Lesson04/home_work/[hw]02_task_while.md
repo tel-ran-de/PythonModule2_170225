@@ -21,10 +21,13 @@
 
 ```python
 n = int(input("Количество карточек: "))
-# Цикл, который выполнится n-1 раз
-while ...:
+total_sum = sum(range(1, n + 1))
+# summa OT 1 DO n
+count = 0
+while count < n - 1:
     card_number = int(input("Номер карточки: "))
-    ...
+    total_sum -= card_number
+    count += 1
 
-print("Номер потерянной карточки:", ...)
+print("Номер потерянной карточки:", total_sum)
 ```
