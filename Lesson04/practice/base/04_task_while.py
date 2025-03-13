@@ -1,4 +1,4 @@
-from itertools import count
+
 
 n = int(input("n:"))
 
