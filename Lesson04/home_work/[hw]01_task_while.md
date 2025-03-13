@@ -36,6 +36,14 @@ n = 12
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+cost = float(input("cost: "))
+n = int(input("n: "))
+i = 1
+print("Выходные данные")
+while True:
+    if i >= n + 1:
+        break
+    print(f"{i:<2}   {cost*i:<3.2f} EUR")
+    i += 1
 ```
 
