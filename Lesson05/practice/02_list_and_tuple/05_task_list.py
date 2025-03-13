@@ -3,9 +3,17 @@
 # выровненного по правой стороне - слева короткие слова дополняем символами пробела
 
 # Исходные данные:
-fruits = ["яблоко", "банан", "киви", "арбуз"]
+fruits = ["банан", "яблоко", "киви", "арбуз"]
 
-# TODO: your code here
+len_max_fruit = 0
+for fruit in fruits:
+    if len(fruit) > len_max_fruit:
+        len_max_fruit = len(fruit)
+
+for i, fruit in enumerate(fruits, 1):
+    length = len(fruit)
+    num_spaces = len_max_fruit - length
+    print(f"{i}.{' ' * num_spaces}{fruit}")
 
 # Пример вывода:
 # 1. яблоко

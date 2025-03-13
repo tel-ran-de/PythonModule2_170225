@@ -3,4 +3,15 @@
 
 fruits = ["яблоко", "банан", "киви", "ананас", "груша"]
 
-# TODO: your code here
+# вариант-1
+# i = 0
+# for fruit in fruits:
+#     i = i + 1
+#     print(f"{i}.{fruit}")
+
+# вариант-2
+for i, fruit in enumerate(fruits, 1):
+    print(f"{i}.{fruit}")
+
+
+
