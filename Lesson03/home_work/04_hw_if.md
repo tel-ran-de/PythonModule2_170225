@@ -19,7 +19,19 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+k = int(input("k: "))
+
+if k // 5 > 0:
+    y = k // 5
+    if (k - 5 * y) % 3 == 0:
+        print("Да")
+    else:
+        print("Нет")
+elif k // 5 == 0:
+    if k % 3 == 0:
+        print("Да")
+    else:
+        print("Нет")
 ```
 
 ---
