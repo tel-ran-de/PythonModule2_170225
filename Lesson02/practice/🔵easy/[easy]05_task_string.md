@@ -19,6 +19,15 @@
 string1 = input("Первая строка:")
 string2 = input("Вторая строка:")
 # TODO: you code here...
+string1 = input("Первая строка:")
+string2 = input("Вторая строка:")
+
+result = len(string1)
+result2 = len(string2)
+
+if result > result2: print(string1)
+if result < result2: print(string2)
+if result == result2: print(string1)
 ```
 
 ---
