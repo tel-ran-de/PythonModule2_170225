@@ -1,5 +1,3 @@
 
 
-names = ["max","varija"]
-
-print(min(names))
+a > b = c
