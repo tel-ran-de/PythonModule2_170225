@@ -18,6 +18,11 @@
 
 ```python
 # TODO: you code here...
+a = int(input("a: "))
+
+floor = a // (10/2)+1
+
+print("Этаж = ", floor)
 ```
 
 ---
