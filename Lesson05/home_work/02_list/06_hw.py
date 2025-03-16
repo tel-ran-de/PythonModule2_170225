@@ -1,4 +1,5 @@
 # Данные о товарах на складе хранятся в словаре
+from collections import Counter
 items = [
     {
         "name": "Кроссовки",
@@ -32,14 +33,18 @@ items = [
     },
 ]
 # Найдите:
-print("Товары на складе представлены брэндами: ")
+if __name__ =="__main__":
+    brands = [item["brand"] for item in items]
+    all_brands = set(brands)
+    
+    print("Товары на складе представлены брэндами:", ', '.join(all_brands))
+    count_brand = Counter(brands)
 
-# TODO: your code here
-
-print("На складе больше всего товаров брэнда(ов): ")
-
-# TODO: your code here
-
-print("На складе самый дорогой товар брэнда(ов): ")
-
-# TODO: your code here
+    max_count = max(count_brand.values())
+    most_common = [brand for brand, count in count_brand.items() if count == max_count]
+    
+    max_price = max(items, key=lambda x: x["price"])
+    
+    print(f"На складе больше всего товаров брэнда(ов):, {', '.join(most_common)}")
+    print(f"На складе самый дорогой товар брэнда(ов):, {max_price["brand"]}")
+   
