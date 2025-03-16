@@ -1,12 +1,19 @@
 # Дано 3 кортежа заполненные произвольными целыми числами.
 # Найдите количество элементов, которые встречаются во всех трех кортежах.
-Work
+from itertools import count
+
 a = (2,4,5)
 b = (5,3,4)
 c = (2,4,5)
 
-max()
+count = 0
+for element in a :
+    if element in b and element in c :
+        count += 1
+print("количество общих элементов:",count)
 
 
-main
+
+
+
 # TODO: your code here

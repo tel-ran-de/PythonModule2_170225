@@ -10,4 +10,4 @@ print(numers[0]+numers[1]+numers[2]+numers[3]+numers[4])
 
 
 # TODO: your code here
-main
+
