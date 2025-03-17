@@ -16,4 +16,13 @@ print("количество общих элементов:",count)
 
 
 
-# TODO: your code here
+tup1 = (2, 4, 6, 0)
+tup2 = (-3, 4, 12, 2, 0, 5)
+tup3 = (2, -4, 12, 0, 5)
+
+count = 0
+for el1 in tup1:
+    if el1 in tup2 and el1 in tup3:
+        count += 1
+
+print(count)
