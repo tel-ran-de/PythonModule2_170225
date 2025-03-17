@@ -5,3 +5,15 @@
 # Пример:
 # Дано: [2, -5, 8, 9, -25, 25, 4]
 # Результат: [3, 5, 2]
+
+numbers = [2, -5, 8, 9, -25, 25, 0, 4, 484]
+result = []
+print(numbers)
+
+for number in numbers:
+    if number >= 0 and (number**0.5).is_integer():
+        result.append(int(number**0.5))
+
+
+
+print(result)
