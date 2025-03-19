@@ -5,3 +5,9 @@
 my_dict = {"a": 1, "b": 2, "c": 3}
 key = input("Enter key: ")
 
+
+if key in my_dict:
+    value = my_dict[key]
+    print(f" {value}")
+else:
+    print("Ключ не найден")
