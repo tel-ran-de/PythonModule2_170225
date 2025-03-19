@@ -7,4 +7,4 @@ print(lengths)
 
 # Перепишите его, используя list comprehensions:
 
-...
+text = [x words for word in words :
