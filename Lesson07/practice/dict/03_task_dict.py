@@ -4,6 +4,7 @@
 keys = ['name', 'surname', 'age', 'rate']
 values = ['Петр', 'Первый', 42, 1300]
 
+<<<<<<< HEAD
 
 
 
@@ -18,5 +19,17 @@ Dict = {
 print(Dict)
 
 # TODO: your code here
+=======
+people = dict(zip(keys, values))
+
+# people = {}
+# for i in range(len(keys)):
+#     key = keys[i]
+#     value = values[i]
+#     people[key] = value
+#
+print(people)
+
+>>>>>>> 154385c3b5f72787a35f27bb8b6927527704f159
 # Нужно получить словарь:
 # {'name': 'Петр', 'surname': 'Первый', 'age': 42, 'rate': 1300}
