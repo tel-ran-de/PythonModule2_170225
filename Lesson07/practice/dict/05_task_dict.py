@@ -17,3 +17,12 @@ sales_store2 = {
     "хлеб": 70
 }
 
+merge_sales = sales_store1.copy()
+
+for key, value in sales_store2.items():
+    if key in merge_sales:
+        merge_sales[key] += value
+    else:
+        merge_sales[key] = value
+
+print(merge_sales)
