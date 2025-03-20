@@ -1,10 +1,12 @@
-def is_even(...):
-    ...
-    return ...
+def is_even(num):
+    if  num % 2 == 0 :
+        return True
+    else:
+     return False
 
-
-n = ...
+n = int(input())
 if is_even(n):
-    print("Число четное")
+
+ print("Число четное")
 else:
-    print("Число не четное")
+ print("Число не четное")

@@ -7,7 +7,11 @@
 #   площадь прямоугольника.
 
 def calculate_rectangle_area(w, h):
-    pass
+    s = w*h
+    print(s)
+    return s
+
+
 
 
 width = int(input("width = "))
