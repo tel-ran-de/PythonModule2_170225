@@ -14,3 +14,9 @@ print(summa)
 
 # Оформите решение задачи в виде функции
 
+def numbers_sum(numbers):
+    summa = 0
+    for number in numbers:
+        if number > 0:
+            summa += number
+
