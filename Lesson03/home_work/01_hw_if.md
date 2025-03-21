@@ -22,4 +22,15 @@
 ```
 
 ---
+def can_break_chocolate(n, m, k):
+    if k < n * m and (k % n == 0 or k % m == 0):
+        return "Да"
+    else:
+        return "Нет"
+
+# Ввод данных
+n, m, k = map(int, input().split())
+
+# Вывод результата
+print(can_break_chocolate(n, m, k))
 
