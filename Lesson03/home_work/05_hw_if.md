@@ -27,7 +27,7 @@ a = int(input("a: "))
 b = int(input("b: "))
 c = int(input("c: "))
 
-# TODO: you code here...
+a, b, c = sorted([a, b, c])
 
 print(a, b, c)
 ```
