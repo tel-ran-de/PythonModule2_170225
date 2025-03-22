@@ -2,9 +2,13 @@
 # Решение реализовать в виде функции.
 # Билет считается счастливым, если сумма его первых и последних цифр равны.
 
-def lucky_ticket(ticket_number):
+
+def lucky_ticket(ticket):
+    if ticket[0:1:2] == ticket[-1:-2:-3]:
+        print("Вы выйграли")
+ticket = int(input("номер билета :"))
     # TODO: your code here
-    pass
+
 
 
 # Тестируем функцию
