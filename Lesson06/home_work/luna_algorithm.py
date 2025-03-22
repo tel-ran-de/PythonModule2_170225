@@ -2,31 +2,70 @@
 
 
 def get_code():
-    code = input("Введите код : " )
+    while True:
+        code = input("Введите код : " )
 
 
-    if len(code) == 16 and code.isdigit():
-        print("Номер принят спасибо")
-        return code
+        if len(code) == 16 and code.isdigit():
+            print("Номер принят спасибо")
+            return code
 
-    else:
-        print("ошибка")
+        else:
+            print("Ошибка")
 
-        return get_code()
+
+
+
 
 kode = get_code()
+if kode:
+    koderevers = list(map(int, kode[::-1]))
 
 
-#code = int(input("Введите 16 значный номер : "))
 
 
 
-#code = [code1]
+    for i in range(len(koderevers) - 2, -1, -2):
+        koderevers[i] *= 2
+        if koderevers[i] > 9:
+            koderevers[i] -= 9
 
-#for num in code1:
-  #  if num  % 2 == 0:
+    totals = sum(koderevers)
+    is_valid = totals % 10 == 0
+    totals1 = totals % 10
 
-     # print(num)
+
+
+
+
+
+    print("Обработанный список",koderevers)
+    print("Сумма  чисел последовательности",totals)
+    print("Проверочная цифра", totals1)
+    print("Код верен." if is_valid else "Код некорректен.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
