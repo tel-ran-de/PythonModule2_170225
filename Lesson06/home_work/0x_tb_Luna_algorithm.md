@@ -17,7 +17,28 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+## "Алгоритм Луна"
+def algorithm_moon(numbers):
+    numbers_str = list(str(numbers))
+    numbers_list = [int(num) for num in numbers_str[::-1]]
+    # print(numbers_list)
+    for i in range(1, len(numbers_list), 2):
+        numbers_list[i] *= 2
+        if numbers_list[i] > 9:
+            numbers_list[i] -= 9
+    # print(numbers_list)
+    # print(sum(numbers_list))
+    return True if sum(numbers_list) % 10 == 0 else False
+
+numbers1 = 4026843483168683
+numbers2 = 2730168464161841
+numbers3 = 5580473372024733
+numbers4 = 5580261212024733
+
+print(algorithm_moon(numbers1))
+print(algorithm_moon(numbers2))
+print(algorithm_moon(numbers3))
+print(algorithm_moon(numbers4))
 ```
 
 ---
