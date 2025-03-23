@@ -20,7 +20,23 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+number = int(input("number = "))
+step = 1
+print("Start")
+# print(number)
+while True:
+    if number % 2 == 0:
+        number = number // 2
+        print(number)
+    else:
+        number = number * 3 + 1
+        print(number)
+    if number <= 1:
+        # print(int(number))
+        break
+    step += 1
+print("Finish")
+print(f"step = {step}")
 ```
 
 ---
