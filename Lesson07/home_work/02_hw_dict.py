@@ -27,22 +27,47 @@ staff = [
     },
 ]
 # Вычислите:
-print("Имя и Фамилию сотрудника с самой высокой зарплатой:")
+max_salary = 0
+min_salary = 0
+highest_paid = {}
+surname_count = {}
+sorted_staff = {}
 
-# TODO: your code here
+print("Имя и Фамилию сотрудника с самой высокой зарплатой:")
+for item in staff:
+    if item['salary'] > max_salary:
+        max_salary = item['salary']
+        highest_paid = item
+print(f"Максимальная зарплата: = {highest_paid['salary']} >>> {highest_paid['name']} {highest_paid['surname']} ")
+print("--------------------\n")
 
 print("Имя и Фамилию сотрудника с самой низкой зарплатой:")
-
-# TODO: your code here
+for item in staff:
+    if item['salary'] < max_salary:
+        min_salary = item['salary']
+        highest_paid = item
+print(f"Минимальная зарплата: = {highest_paid['salary']} >>> {highest_paid['name']} {highest_paid['surname']} ")
+print("--------------------\n")
 
 print("Среднеарифметическую зарплату всех сотрудников")
-
-# TODO: your code here
+# average_salary = sum(item['salary'] for item in staff) / len(staff)
+print(f"Средняя зарплата по палате: = {sum(item['salary'] for item in staff) / len(staff):.2f} ")
+print("--------------------\n")
 
 print("Количество однофамильцев в организации")
-
-# TODO: your code here
+for item in staff:
+    surname = item['surname']
+    if surname in surname_count:
+        surname_count[surname] += 1
+    else:
+        surname_count[surname] = 1
+print(f"{surname_count}")
+for surname, count in surname_count.items():
+    if count > 1:
+        print(f"Однофамильцы в организации {surname}: {count} человека/человек")
+print("--------------------\n")
 
 print("*Список всех сотрудников(Имя и Фамилию) в порядке возрастания их зарплаты")
-
-# TODO: your code here
+sorted_staff = sorted(staff, key=lambda x: x["salary"], reverse=True)
+for employee in sorted_staff:
+    print(employee["name"], employee["surname"], employee["salary"])
