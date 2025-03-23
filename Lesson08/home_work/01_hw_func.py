@@ -4,7 +4,15 @@
 
 def lucky_ticket(ticket_number):
     # TODO: your code here
-    pass
+    ticket_str = str(ticket_number)
+
+    if len(ticket_str) != 6:
+        return False
+
+    first_3_sum = sum(int(digit) for digit in ticket_str[:3])
+    second_3_sum = sum(int(digit) for digit in ticket_str[3:])
+
+    return first_3_sum == second_3_sum
 
 
 # Тестируем функцию
