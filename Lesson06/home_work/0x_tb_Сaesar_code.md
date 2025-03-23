@@ -22,7 +22,20 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+def caesar_cod(text, change):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            char_new = ord('A') if char.isupper() else ord('a')
+            result += chr((ord(char) - char_new + change) % 26 + char_new)
+        else:
+            result += char
+    return result
+
+text = input("текст: ")
+change = int(input("сдвиг: "))
+encrypted_text = caesar_cod(text, change)
+print("Шифрованный текст:", encrypted_text)
 ```
 
 ---
