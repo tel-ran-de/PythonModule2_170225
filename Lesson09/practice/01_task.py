@@ -1,5 +1,6 @@
 # Напишите функцию, которая принимает список строк и возвращает новый список,
 # где каждая строка преобразована в верхний регистр.
+<<<<<<< HEAD
 from ctypes import HRESULT
 from idlelib.debugger_r import restart_subprocess_debugger
 
@@ -30,3 +31,23 @@ def count_upper(strings):
 
 result = count_upper(strings)
 print(result)
+=======
+
+strings = ["hello", "world", "my", "age"]
+
+def to_upper_case(string):
+    return string.upper()
+
+# Вариант-1:
+# upper_strings = []
+# for string in strings:
+#     upper_strings.append(string.upper())
+
+# Вариант-2:
+# upper_strings = [string.upper() for string in strings]
+
+# Вариант-3:
+upper_strings = list(map(to_upper_case, strings))
+
+print(upper_strings)
+>>>>>>> 26acaefa2974c19008732e59e9eb711ea6eb273c
