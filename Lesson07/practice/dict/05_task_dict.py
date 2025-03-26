@@ -17,9 +17,9 @@ sales_store2 = {
     "хлеб": 70
 }
 
-<<<<<<< HEAD
 
-=======
+
+
 merge_sales = sales_store1.copy()
 
 for key, value in sales_store2.items():
@@ -28,5 +28,4 @@ for key, value in sales_store2.items():
     else:
         merge_sales[key] = value
 
-print(merge_sales)
->>>>>>> 154385c3b5f72787a35f27bb8b6927527704f159
+
