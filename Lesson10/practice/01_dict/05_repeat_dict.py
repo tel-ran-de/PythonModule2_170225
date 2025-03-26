@@ -6,4 +6,20 @@
 # Вызовите функцию для поиска товара и выведите результат.
 
 def find_item_by_name(items: list[dict], name: str) -> dict | None:
-    pass
+    for item in items:
+        if item["name"] == name:
+            return item
+
+    return None
+
+
+
+items = [
+    {"name": "Кеды", "cost": 12.5, "count": 10},
+    {"name": "Кепка", "cost": 6.2, "count": 12},
+    {"name": "Носки", "cost": 0.5, "count": 50},
+    {"name": "Рубашка", "cost": 5.45, "count": 17},
+]
+
+result_item = find_item_by_name(items, "Тапки")
+print(result_item)
