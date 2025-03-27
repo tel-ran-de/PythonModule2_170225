@@ -11,14 +11,48 @@ def display_menu():
     print("8. Выход. \n")
 
 
-# Menu
-while True:
+def show_items(items):
     inventory = [
         {"name": "Ноутбук", "price": 1200, "quantity": 10},
         {"name": "Мышь", "price": 25, "quantity": 50},
         {"name": "Клавиатура", "price": 50, "quantity": 30},
     ]
-    display_menu()
+
+
+display_menu()
+
+# Menu
+while True:
     choice = input("Выберите действие: ")
 
-    ...
+if choice == "1":
+    show_items(inventory)
+print(inventory)
+
+if choice == "2":
+    def add_item_to_inventory(items: list[dict]) -> None:
+        """Добавляет товар в инвентарь"""
+
+
+    name = input("Введите название товара: ")
+    price = float(input("Введите цену товара: "))
+quantity = int(input("Введите количество товара: "))
+item = {
+    "name": name,
+    "price": price,
+    "quantity": quantity
+}
+
+items.append(item)
+
+inventory = [
+    {"name": "Ноутбук", "price": 1200, "quantity": 10},
+    {"name": "Мышь", "price": 25, "quantity": 50},
+    {"name": "Клавиатура", "price": 50, "quantity": 30},
+
+]
+
+add_item_to_inventory(inventory)
+
+print(inventory)
+add_item_to_inventory(inventory)

@@ -1,10 +1,9 @@
-hour =int(input("h:"))
-minutes=int(input("m:"))
+def adder(n):
+    def add(x):
+        return x + n
 
-if hour < 24  and minutes < 60 :
-    print("может")
-
-else:
-    print("не может")
+    return add
 
 
+add10 = adder(10)
+print(add10(12))
