@@ -19,7 +19,11 @@
 ```python
 import math
 math.pi # Число pi из библиотеки math
-# TODO: you code here...
+# TODO:
+def circle_area(r):
+    return math.pi*r**2
+
+print(circle_area(11.7))
 ```
 
 ---
