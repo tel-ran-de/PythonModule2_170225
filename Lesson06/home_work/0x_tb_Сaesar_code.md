@@ -23,7 +23,26 @@
 
 ```python
 # TODO: you code here...
-```
+```text = input("введите текст: ")
+new_text = ""
+
+for i in text:
+    if i.isalpha():
+        if i.islower():
+            code = ord(i) + 3
+            if code > ord('z'):
+                code = code - 26
+            new_text += chr(code)
+        elif i.isupper():
+            code = ord(i) + 3
+            if code > ord('Z'):
+                code = code - 26
+            new_text = new_text + chr(code)
+    else:
+        new_text += i
+
+print("ваш зашифрованный текст:", new_text)
+
 
 ---
 
