@@ -4,8 +4,15 @@
 
 
 def validate_arguments(func):
-    # Ваш код здесь
-    pass
+    def wrapper(a, b):
+        if a >= 0 and b >= 0:
+            return func(a, b)
+        else:
+
+            print("Error: negative arguments")
+            return None
+
+    return wrapper
 
 
 @validate_arguments

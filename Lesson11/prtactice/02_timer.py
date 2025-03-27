@@ -5,8 +5,12 @@ import time
 
 
 def timer(func):
-    # Ваш код здесь
-    pass
+     def wrapper(timer):
+
+
+
+
+
 
 
 @timer
