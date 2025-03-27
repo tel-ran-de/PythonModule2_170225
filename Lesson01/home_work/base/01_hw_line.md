@@ -17,7 +17,16 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+
+def celsius_to_fahrenheit(tC):
+    tF = (tC * 9/5) + 32
+    return tF
+
+tC = float(input("Введите температуру в Цельсиях: "))
+
+tF = celsius_to_fahrenheit(tC)
+print(f"Температура в Фаренгейтах: {tF}")
+
 ```
 
 ---
