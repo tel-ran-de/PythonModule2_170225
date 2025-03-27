@@ -12,6 +12,7 @@ def display_menu():
 
 
 def show_items(items):
+<<<<<<< HEAD
     inventory = [
         {"name": "Ноутбук", "price": 1200, "quantity": 10},
         {"name": "Мышь", "price": 25, "quantity": 50},
@@ -56,3 +57,20 @@ add_item_to_inventory(inventory)
 
 print(inventory)
 add_item_to_inventory(inventory)
+=======
+    ...
+
+
+inventory = [
+    {"name": "Ноутбук", "price": 1200, "quantity": 10},
+    {"name": "Мышь", "price": 25, "quantity": 50},
+    {"name": "Клавиатура", "price": 50, "quantity": 30},
+]
+# Menu
+while True:
+    display_menu()
+    choice = input("Выберите действие: ")
+
+    if choice == "1":
+        show_items(inventory)
+>>>>>>> 79e048c3d328c1b37987ef1362fc72e94e4190b3
