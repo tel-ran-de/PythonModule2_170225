@@ -1,3 +1,4 @@
+from pprint import pprint
 # "Добавление нового товара"
 #
 # Создайте список словарей, представляющих несколько товаров.
@@ -11,7 +12,8 @@ def add_item_to_inventory(items: list[dict]) -> None:
     name = input("Введите название товара: ")
     price = float(input("Введите цену товара: "))
     quantity = int(input("Введите количество товара: "))
-    # TODO: допишите функцию
+    item = {"name": name,"price": price,"quantity": quantity}
+    items.append(item)
 
 
 inventory = [
@@ -21,4 +23,4 @@ inventory = [
 ]
 
 add_item_to_inventory(inventory)
-print(inventory)
+pprint(inventory)

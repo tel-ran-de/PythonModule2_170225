@@ -11,14 +11,19 @@ def display_menu():
     print("8. Выход. \n")
 
 
+def show_items(items):
+    ...
+
+
+inventory = [
+    {"name": "Ноутбук", "price": 1200, "quantity": 10},
+    {"name": "Мышь", "price": 25, "quantity": 50},
+    {"name": "Клавиатура", "price": 50, "quantity": 30},
+]
 # Menu
 while True:
-    inventory = [
-        {"name": "Ноутбук", "price": 1200, "quantity": 10},
-        {"name": "Мышь", "price": 25, "quantity": 50},
-        {"name": "Клавиатура", "price": 50, "quantity": 30},
-    ]
     display_menu()
     choice = input("Выберите действие: ")
 
-    ...
+    if choice == "1":
+        show_items(inventory)
