@@ -1,6 +1,3 @@
-import pprint
-
-
 def display_menu():
     print("\nМеню:")
     print("1. Показать список товаров.")
@@ -42,11 +39,24 @@ def add_item_to_inventory(items: list[dict]):
 
 
 def delete_item(items: list[dict]):
-    print("Функция удаления товара пока не реализована.")
+    item_to_remove = input("Введите название товара : ")
+    for item in items:
+        if item["name"] == item_to_remove:
+            items.remove(item)
+            break
 
 
 def update_item(items: list[dict]):
-    print("Функция обновления товара пока не реализована.")
+    item_update = input("Введите товар который нужно обновить :")
+    price = float(input("Введите цену товара: "))
+    quantity = int(input("Введите количество товара: "))
+
+    inventory = {"price": price, "quantity": quantity}
+
+    for item in items:
+        if item["name"] == item_update:
+            item.update(inventory)
+            break
 
 
 def find_item_by_name(items: list[dict]):
@@ -78,8 +88,10 @@ while True:
         add_item_to_inventory(inventory)
     elif choice == "3":
         delete_item(inventory)
+        print("Обновленный список товаров:", inventory)
     elif choice == "4":
         update_item(inventory)
+        print("Товар обновлен")
     elif choice == "5":
         find_item_by_name(inventory)
     elif choice == "6":

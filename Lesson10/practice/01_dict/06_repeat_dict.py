@@ -35,4 +35,4 @@ inventory = [
 
 add_item_to_inventory(inventory)
 
-pprint(inventory)
+print(inventory)
