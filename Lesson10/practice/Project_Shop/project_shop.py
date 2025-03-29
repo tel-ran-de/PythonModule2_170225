@@ -61,6 +61,15 @@ def update_item(items: list[dict]):
 
 def find_item_by_name(items: list[dict]):
     print("Функция поиска товара пока не реализована.")
+    find_item = input("Введите поисковое слово :").lower()
+    matching_items = [item for item in items if 'name' in item and find_item in item['name'].lower()]
+
+    if matching_items:
+        print("Найденные товары:")
+        for match in matching_items:
+            print(match)
+    else:
+        print("Соответствующих товаров не найдено.")
 
 
 def filter_items_by_price(items: list[dict]):
