@@ -10,6 +10,9 @@ def display_menu():
     print("8. Выход. \n")
 
 
+display_menu()
+
+
 def show_items(items):
     if not items:
         print("Список товаров пуст!")
@@ -139,7 +142,7 @@ inventory = [
 ]
 
 while True:
-    display_menu()
+
     choice = input("Выберите категорию: ")
 
     if choice == "1":
