@@ -22,8 +22,6 @@ for item in items:
     if item["name"] == name:
         return item
 
-return None
-
 items = [
     {"name": "Кеды", "cost": 12.5, "count": 10},
     {"name": "Кепка", "cost": 6.2, "count": 12},

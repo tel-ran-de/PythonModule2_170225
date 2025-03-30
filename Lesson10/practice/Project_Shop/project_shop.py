@@ -48,19 +48,56 @@ def delete_item(items: list[dict]):
 
 def update_item(items: list[dict]):
     item_update = input("Введите товар который нужно обновить :")
-    price = float(input("Введите цену товара: "))
-    quantity = int(input("Введите количество товара: "))
-
-    inventory = {"price": price, "quantity": quantity}
 
     for item in items:
         if item["name"] == item_update:
-            item.update(inventory)
-            break
+            print(f"Товар найден : {item}")
+
+            print("Что вы хотите обновить?")
+            print("1 - Цена")
+            print("2 - Количество")
+            print("3 - И цену, и количество")
+            choice = input("Введите номер действия (1, 2 или 3): ")
+
+            # Проверка выбора
+            if choice not in {"1", "2", "3"}:
+                print("Ошибка: Неверный выбор.")
+                return
+
+            # Обновляем только цену
+            if choice in {"1", "3"}:
+                price_input = input("Введите новую цену товара: ")
+                if price_input.replace(".", "", 1).isdigit():  # Проверяем, что цена — число
+                    new_price = float(price_input)
+                    if new_price < 0:
+                        print("Ошибка: Цена не может быть отрицательной.")
+                        return
+                    item["price"] = new_price
+                else:
+                    print("Ошибка: Цена должна быть числом.")
+                    return
+
+            # Обновляем только количество
+            if choice in {"2", "3"}:
+                quantity_input = input("Введите новое количество товара: ")
+                if quantity_input.isdigit():  # Проверяем, что количество — положительное целое число
+                    new_quantity = int(quantity_input)
+                    if new_quantity < 0:
+                        print("Ошибка: Количество не может быть отрицательным.")
+                        return
+                    item["quantity"] = new_quantity
+                else:
+                    print("Ошибка: Количество должно быть целым числом.")
+                    return
+
+            # Сообщение об успешном обновлении
+            print(f"Товар обновлен: {item}")
+            return
+
+    print(f"Ошибка: Товар '{item_update}' не найден.")
 
 
 def find_item_by_name(items: list[dict]):
-    print("Функция поиска товара пока не реализована.")
     find_item = input("Введите поисковое слово :").lower()
     matching_items = [item for item in items if 'name' in item and find_item in item['name'].lower()]
 
@@ -73,11 +110,25 @@ def find_item_by_name(items: list[dict]):
 
 
 def filter_items_by_price(items: list[dict]):
-    print("Функция фильтрации по цене пока не реализована.")
+    filter_price_min = float(input("Введите  искомую цену : "))
+    matching_price = [item for item in items if 'price' in item and item['price'] <= filter_price_min]
+    if matching_price:
+        print("Найденные цены : ")
+        for match in matching_price:
+            print(match)
+    else:
+        print("Такой цены не существует.")
 
 
 def filter_items_by_quantity(items: list[dict]):
-    print("Функция фильтрации по количеству пока не реализована.")
+    find_quantity = int(input("Введите искомое количество товара : "))
+    matching_quantity = [item for item in items if 'quantity' in item and item['quantity'] <= find_quantity]
+    if matching_quantity:
+        print("Найденное по количеству товара : ")
+        for match in matching_quantity:
+            print(match)
+    else:
+        print("Такого количества товара не существует .")
 
 
 inventory = [
@@ -103,13 +154,16 @@ while True:
         print("Товар обновлен")
     elif choice == "5":
         find_item_by_name(inventory)
+        print("Товар найден")
     elif choice == "6":
         filter_items_by_price(inventory)
+        print("Цены ниже указанной суммы :")
     elif choice == "7":
         filter_items_by_quantity(inventory)
+        print("Количество ниже указанного :")
     elif choice == "8":
-        confirm = input("Вы уверены, что хотите выйти? (да/нет): ").lower()
-        if confirm == "да":
+        confirm = input("Вы уверены, что хотите выйти? (y/n): ").lower()
+        if confirm == "y" or confirm == "yes":
             print("Выход, заходите еще!")
             break
     else:
