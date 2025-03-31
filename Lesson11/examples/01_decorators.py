@@ -17,21 +17,20 @@ say_hello()
 # Что-то происходит после функции.
 
 
-# Декоратор с аргументами функции
-def my_decorator(func):
+# Декоратор логирование вызовов функций
+def log(func):
     def wrapper(*args, **kwargs):
-        print("Аргументы функции:", args, kwargs)
+        print(f'Вызвана функция {func.__name__} с аргументами {args}, {kwargs}')
         return func(*args, **kwargs)
     return wrapper
 
-@my_decorator
-def greet(name, age):
-    print(f"Привет, {name}. Тебе {age} лет.")
+@log
+def multiply(x, y):
+    return x * y
 
-greet("Алиса", 30)
+multiply(3, 4)
 # Вывод:
-# Аргументы функции: ('Алиса', 30) {}
-# Привет, Алиса. Тебе 30 лет.
+# Вызвана функция multiply с аргументами (3, 4), {}
 
 
 # Декоратор с параметрами
