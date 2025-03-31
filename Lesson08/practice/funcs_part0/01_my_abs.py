@@ -1,14 +1,8 @@
-def my_abs(number):
+def my_abs(number: int | float) -> int | float:
     if number < 0:
         return -number
     return number
 
-def my_abs(number):
-    return number if number >= 0 else -number
 
-
-print(my_abs(-5))
-print(my_abs(5))
-print(my_abs(0))
-print(my_abs(-2.5))
-print(my_abs(2.5))
+my_abs(-123)
+my_abs(5.6)
