@@ -33,7 +33,17 @@ print(f"Сумма чисел = {sum_numbers}")
 print(f"Среднеарифметическое = {...}")
 ```
 
----
+f = open("data/numbers.txt", "r", encoding="UTF-8")
+sum_numbers = 0
+i = 0
+for line in f:
+    num = int(line.strip())
+    sum_numbers += num
+    i += 1
+f.close()
+print(f"количество чисел = {i}")
+print(f"Сумма чисел = {sum_numbers}")
+print(f"Среднеарифметическое = {sum_numbers/i}")
 
 ### Подсказки
 
