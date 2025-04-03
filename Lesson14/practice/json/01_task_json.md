@@ -18,10 +18,13 @@ import json
 
 def read_json_data(filepath):
     """Читает данные из JSON-файла и возвращает словарь."""
-    ...
-    return data
+    with open(filepath, 'r', encoding='UTF-8') as f:
+        read_data = json.load(f)
 
-filepath = ...
+    return read_data
+
+
+filepath = "data/data.json"
 data = read_json_data(filepath)
 print(data["name"])
 ```
