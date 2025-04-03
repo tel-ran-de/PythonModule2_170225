@@ -32,7 +32,31 @@
 # А затем, работам с привычным списком, выполните задания
 prices = []
 ```
+## "Кассовый аппарат"
 
+path = "data/sold.txt"
+total_sales_amount = 0.0
+most_expensive_item_price = 0.0 # max
+cheapest_item_price = 10000.0 # min
+day = 0
+with open(path, 'r', encoding='UTF-8') as file:
+    for line in file:
+        day += 1
+        numbers_str = line.split()
+        numbers_day = [float(x) for x in numbers_str]
+        min_value = min(numbers_day)  # Найти минимальное значение
+        max_value = max(numbers_day)  # Найти максимальное значение
+        total_sales_amount += sum(numbers_day)
+        print(f"day {day} price min = {min_value}, price max = {max_value}")
+        most_expensive_item_price
+        if min_value < cheapest_item_price:
+            cheapest_item_price = min_value
+        if max_value > most_expensive_item_price:
+            most_expensive_item_price = max_value
+print("--------------")
+print(f"Цену самого дорогого товара = {most_expensive_item_price} grn")
+print(f"Цену самого дешевого товара = {cheapest_item_price} grn")
+print(f"total_sales_amount = {total_sales_amount} grn")
 ---
 
 ### Подсказки
