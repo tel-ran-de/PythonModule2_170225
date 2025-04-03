@@ -11,8 +11,18 @@ def display_menu():
     print("8. Выход. \n")
 
 
-def show_items(items):
-    ...
+def show_items(items: list[dict]): # 1
+    print("show_items")
+
+def find_item_by_name(items: list[dict], item_name): # 5
+    print("find_item_by_name")
+
+def filter_items_lower_price(items: list[dict]): # 6
+    price = int(input("Укажите минимальную цену: "))
+
+    for item in items:
+        if item["price"] < price:
+            print(f"{item['name']} Цена: {item['price']} Количество: {item['quantity']}")
 
 
 inventory = [
@@ -27,3 +37,9 @@ while True:
 
     if choice == "1":
         show_items(inventory)
+    elif choice == "5":
+        find_item_by_name(inventory, ...)
+    elif choice == "6":
+        filter_items_lower_price(inventory)
+    elif choice == "8":
+        break
