@@ -16,15 +16,15 @@ def parse_fraction(f):
     den = ...  # знаменатель
 
 # TODO: your code here
-<<<<<<< HEAD
+
 def plus_minus()
-=======
+
 
 #     01234
 f1 = "2 4/5" # парсинг
 f2 = "12 5/6"
 "4/5 + 5/10" -> "8/10 + 5/10" -> "13/10"
->>>>>>> 26acaefa2974c19008732e59e9eb711ea6eb273c
+
 
 
 

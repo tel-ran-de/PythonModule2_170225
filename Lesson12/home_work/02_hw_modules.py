@@ -15,3 +15,16 @@ forest = [['.', 'T', '.', '.', 'T', '.', '.', 'T', '.', '.'],
           ['.', 'T', '.', 'T', '.', '.', 'T', '.', '.', '.'],
           ['T', '.', '.', '.', '.', 'T', '.', 'T', '.', '.'],
           ['.', '.', 'T', '.', 'T', '.', '.', '.', 'T', '.']]
+for line in forest:
+    print(''.join(line))
+
+import random
+
+
+def generate_forest(rows, columns: int) -> list:
+    new_forest = []
+    for row in range(rows):
+        line = [random.choice(["T", "."]) for row in range(columns)]
+        new_forest.append(line)
+
+    return new_forest
