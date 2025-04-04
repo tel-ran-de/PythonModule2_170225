@@ -1,15 +1,14 @@
+from pathlib import Path
 import json
 
 
 def read_json_data(filepath):
-    with open(filepath, "r") as f:
-        return json.load(f)
+    """Читает данные из JSON-файла и возвращает словарь."""
+    with open(filepath, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    return data
 
 
-filepath = "data.data.json"
+filepath = Path('data/data.json')
 data = read_json_data(filepath)
-
-if "name" in data:
-    print(data["name"])
-else:
-    print("Ключ 'name' не найден в данных.")
+print(data["age"])
