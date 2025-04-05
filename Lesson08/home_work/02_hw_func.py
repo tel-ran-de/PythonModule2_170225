@@ -9,5 +9,25 @@ def distance(x1, y1, x2, y2):
     pass
 
 
-# TODO: your code here
-print("Самый короткий отрезок:", ...)  # Выводим название отрезка, например “АС”.
+ Функция расстояния между двумя точками
+def distance(x1, y1, x2, y2):
+    return ((x2 - x1)**2 + (y2 - y1)**2) ** 0.5
+
+# Задаём координаты трёх точек
+xa, ya = 1, 2
+xb, yb = 4, 6
+xc, yc = 2, 1
+
+# Считаем длины отрезков
+ab = distance(xa, ya, xb, yb)
+bc = distance(xb, yb, xc, yc)
+ac = distance(xa, ya, xc, yc)
+
+# Находим самый короткий отрезок
+if ab <= bc and ab <= ac:
+    shortest = "AB"
+elif bc <= ab and bc <= ac:
+    shortest = "BC"
+else:
+    shortest = "AC"
+print("Самый короткий отрезок:",  shortest)  # Выводим название отрезка, например “АС”.

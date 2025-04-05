@@ -37,5 +37,16 @@ n = 12
 
 ```python
 # TODO: you code here...
-```
+```# Входные данные
+cost = 9.99
+n = 12
+
+# Счётчик
+i = 1
+
+# Цикл while
+while i <= n:
+    total = cost * i
+    print(f"{i} {total:.2f} рублей")
+    i += 1
 

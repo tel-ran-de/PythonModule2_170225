@@ -16,14 +16,26 @@ def parse_fraction(f):
     den = ...  # знаменатель
 
 # TODO: your code here
+def parse_fraction(f):
+    space_index = f.index(" ")
+    n = int(f[:space_index])  # целая часть
+    fraction = f[space_index + 1:]
+    num, den = map(int, fraction.split("/"))  # дробная часть
+    return n, num, den
 
-#     01234
-f1 = "2 4/5" # парсинг
-f2 = "12 5/6"
-"4/5 + 5/10" -> "8/10 + 5/10" -> "13/10"
+# пример использования
+f1 = "2 4/5"
+f2 = "1 1/3"
 
+n1, num1, den1 = parse_fraction(f1)
+n2, num2, den2 = parse_fraction(f2)
 
+print("Первая дробь:")
+print("Целая часть:", n1)
+print("Числитель:", num1)
+print("Знаменатель:", den1)
 
-# 1. прарсинг дроби - выделить целое, числитель ит знаменатель
-# 2. Привести дроби к общему знаменателю
-# 3. Целое + целое, числитель + числитель, знаменатель общий
+print("Вторая дробь:")
+print("Целая часть:", n2)
+print("Числитель:", num2)
+print("Знаменатель:", den2)

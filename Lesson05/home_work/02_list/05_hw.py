@@ -4,3 +4,12 @@
 names = ["Иван", "Ирина", "Вячеслав", "Василий", "Петр"]
 
 # TODO: your code here
+names = ["Иван", "Ирина", "Вячеслав", "Василий", "Пётр"]
+
+max_name = names[0]  # сначала предполагаем, что самое длинное — первое имя
+
+for name in names:
+    if len(name) > len(max_name):
+        max_name = name
+
+print("Самое длинное имя:", max_name)

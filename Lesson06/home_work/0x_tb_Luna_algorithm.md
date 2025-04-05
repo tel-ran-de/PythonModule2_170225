@@ -16,9 +16,30 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
+# Беру число как строку
+number = input()
+
+# Разбиваю на цифры и сразу превращаю в числа
+digits = [int(d) for d in number]
+
+# Удваиваю каждую вторую цифру, начиная с предпоследней (индексы 4, 2, 0)
+i = 4
+while i >= 0:
+    digits[i] = digits[i] * 2
+    if digits[i] > 9:
+        digits[i] = digits[i] - 9
+    i = i - 2
+
+# Складываю все цифры
+total = 0
+for d in digits:
+    total = total + d
+
+# Проверяю, делится ли на 10
+if total % 10 == 0:
+    print("Да")
+else:
+    print("Нет")
 
 ---
 
