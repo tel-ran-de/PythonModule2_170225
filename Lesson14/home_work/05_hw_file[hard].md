@@ -21,8 +21,54 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
+def open_file_employees(in_file = "data/workers.txt"):
+    employees = []
+    with open(in_file, "r", encoding="UTF-8") as f:
+        lines = [line.strip() for line in f]
+        # print(lines)
+        headers = lines[0].split()
+        # print(headers)
+        for line in lines[1:]:
+            if line.strip():
+                values = line.strip().split()
+                employee = dict(zip(headers, values))
+                employees.append(employee)
+        # for emp in employees:
+        #     print(emp)
+    return employees
 
----
+
+
+employees = open_file_employees()
+
+employees_hours = open_file_employees("data/hours_of.txt")
+
+
+result_lines = []
+header = f"{'Фамилия':<15} {'Должность':<20} {'Реальная зарплата':>18}"
+result_lines.append(header)
+
+for employee_h in employees_hours:
+    for employee in employees:
+        if employee_h["Фамилия"] == employee["Фамилия"]:
+            norm_hours = int(employee["Норма_часов"])
+            worked_hours = int(employee_h["Отработано_часов"])
+            salary = int(employee["Зарплата"])
+            position = employee["Должность"]
+            surname = employee["Фамилия"]
+
+            hourly_rate = salary / norm_hours
+
+            if worked_hours > norm_hours:
+                overtime = worked_hours - norm_hours
+                real_salary = salary + overtime * hourly_rate * 2
+            elif worked_hours == norm_hours:
+                real_salary = salary
+            else:
+                real_salary = worked_hours * hourly_rate
+
+            result_line = f"{surname:<15} {position:<20} {real_salary:>18.2f}"
+            result_lines.append(result_line)
+
+for line in result_lines:
+    print(line)
