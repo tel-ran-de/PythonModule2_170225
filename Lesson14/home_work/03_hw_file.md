@@ -33,10 +33,29 @@ n = 6
 
 ### Решение задачи
 
-```python
-n = int(input("n: "))
-# TODO: you code here...
-```
+def generate_pyramid(n, filename="pyramid.txt"):
+    """
+    Записывает пирамиду из n строк в указанный файл.
+    Параметры:
+    n (int): количество строк в пирамиде.
+    filename (str): имя файла для записи (по умолчанию 'pyramid.txt').
+    """
+    with open(filename, "w") as f:
+        line = "*"
+        for i in range(1, n + 1):
+            print(f"{line:^{n*2-1}}", file=f)
+            line += "**"
+            # variant_2
+            # line = " " * (n - i) + "*" * (2 * i - 1)
+            # if i != n:
+            #     f.write(line + "\n")
+            # else:
+            #     f.write(line)
+
+
+n = int(input("количество строк в пирамиде: "))
+
+generate_pyramid(n)
 
 ---
 <details>
