@@ -14,15 +14,44 @@
 Программа ничего не выводит в терминал, все сообщения записываются в указанный файл или в файл по умолчанию.
 
 ### Решение задачи
+def is_integer(s):
+    """
+    Проверяет, является ли строка целым числом.
+    Параметры:
+        s (str): строка, которую нужно проверить.
+    Возвращает:
+        bool: True, если строка представляет целое число, иначе False.
+    """
+    try:
+        int(s)
+        return True
+    except ValueError:
+        return False
 
-```python
-summa = 0
-with open("data/info.txt", "r") as f:
-    pass
+def calculate_sum(in_file="data/info.txt", out_file="data/total_sum.txt"):
+    """
+    Считывает целые числа из текстового файла, суммирует их и записывает результат в другой файл.
+    Параметры:
+        in_file (str): путь к входному файлу с числами (по одному на строку).
+        out_file (str): путь к выходному файлу, куда будет записана сумма.
+    Возвращает:
+        None
+    """
+    summa = 0
+    with open(in_file, "r") as f:
+        for line in f:
+            line = line.strip()
+            if is_integer(line):
+                summa += int(line)
+                # print(f"{line} -> {summa}")
+    # print(f"Сумма чисел = {summa}")
+    with open(out_file, "w", encoding="UTF-8") as f:
+        str_summa = "Сумма чисел = " + str(summa)
+        f.write(str_summa)
 
-print(f"Сумма чисел = {summa}")
-# Уточнение: в сумму добавляем только те значения, которые можно преобразовать к int'у
-# Например: int("-26") --> -26, а int("--26") --> ошибка
+
+
+calculate_sum()
 ```
 
 ---
