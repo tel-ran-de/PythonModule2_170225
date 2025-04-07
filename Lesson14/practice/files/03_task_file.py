@@ -3,6 +3,17 @@
 # А затем, работам с привычным списком, выполните задания
 prices = []
 path = "data/sold.txt"
+<<<<<<< HEAD
+with open(path, 'r') as file:
+    for line in file:
+        prices += (line.split())
+
+print(prices)
+prices_number = list(map(float, prices))
+print(sum(prices_number))
+print(max(prices_number))
+print(min(prices_number))
+=======
 
 with open(path, "r") as file:
     for line in file:
@@ -13,3 +24,4 @@ prices_number = list(map(float, prices))
 print(sum(prices_number))
 print(max(prices_number))
 print(min(prices_number))
+>>>>>>> 0e5eb8b83fc330f0251cd13e3b23733541763246

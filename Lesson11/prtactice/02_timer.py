@@ -4,6 +4,14 @@
 import time
 
 
+
+def timer(func):
+     def wrapper(timer):
+
+
+
+
+
 def timer(original_function):
     def wrapper_function(*args, **kwargs):
         # Код до вызова оригинальной функции

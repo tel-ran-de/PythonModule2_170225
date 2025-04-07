@@ -1,9 +1,12 @@
 def is_even(num):
-    return num % 2 == 0
+    if  num % 2 == 0 :
+        return True
+    else:
+     return False
 
-
-n = int(input("Введите число: "))
+n = int(input())
 if is_even(n):
-    print("Число четное")
+
+ print("Число четное")
 else:
-    print("Число не четное")
+ print("Число не четное")

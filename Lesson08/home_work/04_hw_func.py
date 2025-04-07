@@ -17,10 +17,14 @@ def parse_fraction(f):
 
 # TODO: your code here
 
+def plus_minus()
+
+
 #     01234
 f1 = "2 4/5" # парсинг
 f2 = "12 5/6"
 "4/5 + 5/10" -> "8/10 + 5/10" -> "13/10"
+
 
 
 

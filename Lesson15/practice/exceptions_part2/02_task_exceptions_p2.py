@@ -1,7 +1,14 @@
 def validate_email(email):
     # Добавьте проверку, что email содержит символ '@'.
     # Если email некорректный, выбросьте исключение ValueError.
+    if "@" not in email:
+        raise ValueError("Email is not valid")
+
     return email
 
+
 # Добавьте обработку исключения ValueError
-print(validate_email("user.example.com"))
+try:
+    print(validate_email("user.example.com"))
+except ValueError as e:
+    print(e)
