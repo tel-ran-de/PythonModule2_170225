@@ -16,7 +16,17 @@
 
 ```python
 def log(text, file="log.txt"):
-    ...
+
+def log(message):
+    with open('log.txt', 'a') as file:
+        file.write(message + '\n')
+
+log("hello world")
+
+def log(text):
+    with open('log01.txt', 'a') as file:
+        file.write(text + '\n')
+log("message")
 
 log("hello world")  # дописывает "hello world" в конец файла log.txt
 log("message", "log01.txt")  # дописывает "message" в конец файла log01.txt
