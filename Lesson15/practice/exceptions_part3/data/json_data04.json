@@ -1,0 +1,6 @@
+{
+  "title": "Список задач",
+  "completed": false,
+  "tasks": ["Купить хлеб", "Позвонить другу"],
+  "priority": null
+}
