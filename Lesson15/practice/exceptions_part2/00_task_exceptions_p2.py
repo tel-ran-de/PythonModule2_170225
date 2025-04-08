@@ -10,9 +10,15 @@ def lucky_ticket(ticket_number):
     return first_half == second_half
 
 
-ticket = int(input("Введите шестизначный номер билета: "))
+while True:
+    ticket = int(input("Введите шестизначный номер билета: "))
 
-if lucky_ticket(ticket):
-    print("Счастливый билет")
-else:
-    print("Не счастливый билет")
+    try:
+        if lucky_ticket(ticket):
+            print("Счастливый билет")
+        else:
+            print("Не счастливый билет")
+    except ValueError as e:
+        print(e)
+    else:
+        break

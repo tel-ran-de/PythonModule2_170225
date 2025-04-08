@@ -15,10 +15,12 @@ def process_json_data(filename):
 # Обратите внимание, для каких файлов срабатывает какая обработка исключения
 
 try:
-    process_json_data(Path("data") / "json_data0x.json")
+    process_json_data(Path("data") / "json_data01.json")
 except FileNotFoundError:
     print("Файл не найден!")
 except json.JSONDecodeError as e:
     print(f"Ошибка JSON: {e}")
 except KeyError:
     print(f"Некорректная обработка данных")
+except BaseException as e:
+    print(e)

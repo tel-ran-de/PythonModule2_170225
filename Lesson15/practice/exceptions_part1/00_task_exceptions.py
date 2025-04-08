@@ -8,6 +8,9 @@ with open(path, 'r', encoding='UTF-8') as f:
     # Находим сумму всех чисел в файле
     s = 0
     for line in f:
-        s += int(line)
+        try:
+            s += int(line)
+        except ValueError:
+            pass
 
 print(s)
