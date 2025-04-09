@@ -6,7 +6,8 @@ def powers_of_two(n):
         yield 2 ** i
 
 
-powers = powers_of_two(10)
+n = int(input("n: "))
+powers = powers_of_two(n)
 print(next(powers))
 print(next(powers))
 print(next(powers))
