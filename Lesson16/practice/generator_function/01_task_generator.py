@@ -2,4 +2,9 @@
 # Напишите генераторную функцию even_numbers(n), которая генерирует все четные числа от 0 до n включительно.
 
 def even_numbers(n):
-    pass
+    for number in range(0, n + 1, 2):
+        yield number
+
+
+for el in even_numbers(11):
+    print(el)
