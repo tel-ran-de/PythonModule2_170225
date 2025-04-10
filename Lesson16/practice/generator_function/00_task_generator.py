@@ -20,4 +20,10 @@ def is_prime(n: int) -> bool:
 
 
 def simple_primes(n):
-    pass
+    for number in range(n + 1):
+        if is_prime(number):
+            yield number
+
+
+for prime in simple_primes(30):
+    print(prime)

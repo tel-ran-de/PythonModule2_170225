@@ -27,3 +27,5 @@ for square in squares_generator:
 
 sum_of_squares = sum(x**2 for x in range(1, 11))
 print(sum_of_squares)  # Выведет: 385
+
+# 0, 1, 1, 2, 3, 5, 8, 13, 21 ...
