@@ -7,8 +7,8 @@ def powers_of_two(n):
 
 
 n = int(input("n: "))
-powers = powers_of_two(n)
-print(next(powers))
+powers = powers_of_two(5)
+print(list(powers_of_two(5)))
 print(next(powers))
 print(next(powers))
 print(next(powers))
