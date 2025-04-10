@@ -6,6 +6,13 @@ def remove_duplicates(data: list):
             data.remove(item)
     return data
 
+
+def test_remove_duplicates():
+    assert remove_duplicates([1, 2, 3, 1, 2, 3]) == [1, 2, 3]
+    assert remove_duplicates([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5]
+
+
 # Протестируйте работу функции.
 # Исправьте ошибки.
 # Является ли функция чистой?
+test_remove_duplicates()

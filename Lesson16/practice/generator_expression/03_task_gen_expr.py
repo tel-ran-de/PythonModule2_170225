@@ -17,7 +17,7 @@ def is_prime(n: int) -> bool:
         i += 6
     return True
 
-<<<<<<< HEAD
+
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 
@@ -41,8 +41,7 @@ def is_prime(n: int) -> bool:
 
 for n in range(20) if is_prime(n) else ():
     print(n)
-=======
+
 gen_primes = (n for n in range(20) if is_prime(n))
 
 print(list(gen_primes))
->>>>>>> d6041d05ecef6a9912aa912e92a67475e5be03d6

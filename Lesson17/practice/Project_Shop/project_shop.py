@@ -1,3 +1,6 @@
+from selectors import SelectSelector
+
+
 def add_item(inventory):
     """Добавляет новый товар в инвентарь."""
     name = input("Введите название товара: ").strip()
@@ -16,7 +19,14 @@ def add_item(inventory):
             print("Ошибка: Введите корректное число для цены.")
 
     # TODO-1: добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
-    quantity = int(input("Введите количество товара: "))
+    try:
+        quantity = int(input("Введите количество товара: "))
+        if quantity <= 0:
+            print("Некорректное количество товара !")
+
+
+    except ValueError:
+        print("Ошибка введите целое число")
 
     inventory.append({"name": name, "price": price, "quantity": quantity})
     print(f"Товар '{name}' успешно добавлен.")
@@ -56,7 +66,15 @@ def update_item(inventory):
                         print("Ошибка: Введите корректное число для цены.")
             elif choice == '2':
                 # TODO-2: добавьте обработку ввода некорректного нового количества товаров (по аналогии с ценой)
-                quantity = int(input("Введите новое количество: "))
+                try:
+
+                    quantity = int(input("Введите новое количество: "))
+                    if quantity <= 0:
+                        print()
+                    else:
+                        break
+                except ValueError:
+                    print("Ошибка введите корректную цену")
                 item['quantity'] = quantity
                 print(f"Количество товара '{name}' успешно обновлено.")
 
@@ -78,9 +96,13 @@ def search_item(inventory):
 def display_inventory(inventory):
     """Выводит список всех товаров."""
     # TODO-3: если в списке нет товаров, выведите "Инвентарь пуст"
-    print("Список товаров:")
-    for i, item in enumerate(inventory):
-        print(f"{i + 1}. Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
+    inventory = []
+    if len(inventory) == 0:
+        print("инвентарь пуст")
+    else:
+        print("Список товаров:")
+        for i, item in enumerate(inventory):
+            print(f"{i + 1}. Название: {item['name']}, Цена: {item['price']}, Количество: {item['quantity']}")
 
 
 def display_below_price(inventory):
@@ -135,25 +157,18 @@ def main():
 
         choice = input("Выберите операцию: ")
         # TODO-0: реализуйте выбор пунктов меню, используя словарь menu_options = {}
-        if choice == '1':
-            display_inventory(inventory)
-        elif choice == '2':
-            add_item(inventory)
-        elif choice == '3':
-            remove_item(inventory)
-        elif choice == '4':
-            update_item(inventory)
-        elif choice == '5':
-            search_item(inventory)
-        elif choice == '6':
-            display_below_price(inventory)
-        elif choice == '7':
-            display_below_quantity(inventory)
-        elif choice == '8':
-            print("Завершение работы программы.")
+        menu_options = {
+            '1': display_inventory,
+            '2': add_item,
+            '3': remove_item,
+            '4': update_item,
+            '5': search_item,
+            '6': display_below_price,
+            '7': display_below_quantity,
+        }
+        if choice == '8':
             break
-        else:
-            print("Некорректный ввод. Пожалуйста, выберите операцию из меню.")
+        menu_options[choice](inventory)
 
 
 if __name__ == "__main__":
