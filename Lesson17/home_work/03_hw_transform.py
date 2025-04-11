@@ -9,3 +9,9 @@ students = [
     {'name': 'David', 'grade': 4.2},
     {'name': 'Eve', 'grade': 4.91}
 ]
+
+students_note = list(filter(lambda student: student['grade'] > 4.5, students))
+print(students_note)
+
+students_1 = float(students) for students in students)
+print(students_1)
