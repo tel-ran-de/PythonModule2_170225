@@ -1,7 +1,8 @@
 # Дана функция
 def celsius_to_fahrenheit(celsius: int | float) -> float:
     "Конвертация температуры из Цельсия в Фаренгейт"
-    return (celsius * 9 / 5) + 30
+    return (celsius * 9 / 5) + 32
+
 
 # Протестируйте работу функции.
 # Исправьте ошибки.
