@@ -1,8 +1,9 @@
-cost = float(input("price:"))
-m =  int(input("pices:"))
+cost = float(input("price:"))  # Цена
+m = int(input("pices:"))  # Количество товара
+if m < 0:  # Цикл 1
+    print("Количество товара не может быть отрицательным !")
 n = 1
+while n < m + 1:  # Цикл 2
+    print(f" Цена за {n} шт :{cost * n} еек")
 
-
-while n <= m :
-    print("price:",n * cost, "Рублей" )
-    n = n + 1
+    n += 1

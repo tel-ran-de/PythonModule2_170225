@@ -1,11 +1,11 @@
-a = int(input())
-b = int(input())
-c = int(input())
+a = int(input("a :"))
+b = int(input("b :"))
+c = int(input("c :"))
 
-if a > b :
-   a, b = b, a
+if a > b:
+    a, b = b, a
 if a > c:
-   a, c = c, a
+    a, c = c, a
 if b > c:
-   b, c = c, b
+    b, c = c, b
 print(a, b, c)

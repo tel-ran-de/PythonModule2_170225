@@ -9,9 +9,14 @@ students = [
     {'name': 'David', 'grade': 4.2},
     {'name': 'Eve', 'grade': 4.91}
 ]
-
+# Фильтр оценок > 4,5
 students_note = list(filter(lambda student: student['grade'] > 4.5, students))
-print(students_note)
+print(f"Студенты, чей средний балл выше 4.5 : {students_note}")
 
-students_1 = float(students) for students in students)
-print(students_1)
+# Средний бал оставшихся оценок
+
+students_not = list(filter(lambda student: student['grade'] < 4.5, students))
+
+summa = sum(students_not['grade'] for students_not in students_not)
+summa2 = summa / 2
+print(f"Средний балл оставшихся студентов: {summa2:.2f}")
