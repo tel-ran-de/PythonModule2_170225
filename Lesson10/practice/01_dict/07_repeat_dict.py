@@ -6,11 +6,13 @@
 # Функция должна удалять товар с указанным названием из списка.
 # Если товар не найден, функция должна выводить сообщение об ошибке.
 # Вызовите функцию для удаления товара и выведите обновленный список на экран.
+def remove_item_from_inventory(items: list[dict]):
+    item_to_remove = input("Введите название товара : ")
+    for item in items:
+        if item["name"] == item_to_remove:
+            items.remove(item)
 
-def remove_item_from_inventory(items: list[dict]) -> None:
-    """Удаляет товар из инвентаря по названию с вводом данных внутри функции."""
-    name = input("Введите название товара для удаления: ")
-    # TODO: допишите функцию
+            break
 
 
 inventory = [
@@ -20,4 +22,4 @@ inventory = [
 ]
 
 remove_item_from_inventory(inventory)
-print(inventory)
+print("Обновленный список товаров:", inventory)

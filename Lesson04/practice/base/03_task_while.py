@@ -1,4 +1,15 @@
-n = int(input("n: "))
+
+
+
+
+n = int(input("a :"))
+
+
+
+
+
+
+
 
 summa = 0
 while n >= 0:

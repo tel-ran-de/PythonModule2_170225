@@ -7,12 +7,20 @@
 
 def find_item_by_name(items: list[dict], name: str) -> dict | None:
     for item in items:
-        if item["name"] == name:
+        if item[name] == name:
             return item
 
-    return None
 
+items = [
+    {"name": "шапки", "cost": 12.5, "count": 10},
+    {"name": "кеды", "cost": 6.5, "count": 10},
+    {"name": "носки", "cost": 0.5, "count": 50},
+    {"name": "трусы", "cost": 5.5, "count": 10}
+]
 
+for item in items:
+    if item["name"] == name:
+        return item
 
 items = [
     {"name": "Кеды", "cost": 12.5, "count": 10},

@@ -1,3 +1,6 @@
+from selectors import SelectSelector
+
+
 def add_item(inventory):
     """Добавляет новый товар в инвентарь."""
     name = input("Введите название товара: ").strip()
@@ -16,7 +19,14 @@ def add_item(inventory):
             print("Ошибка: Введите корректное число для цены.")
 
     # TODO-1: добавьте обработку ввода некорректного количества товаров (по аналогии с ценой)
-    quantity = int(input("Введите количество товара: "))
+    try:
+        quantity = int(input("Введите количество товара: "))
+        if quantity <= 0:
+            print("Некорректное количество товара !")
+
+
+    except ValueError:
+        print("Ошибка введите целое число")
 
     inventory.append({"name": name, "price": price, "quantity": quantity})
     print(f"Товар '{name}' успешно добавлен.")
@@ -56,7 +66,15 @@ def update_item(inventory):
                         print("Ошибка: Введите корректное число для цены.")
             elif choice == '2':
                 # TODO-2: добавьте обработку ввода некорректного нового количества товаров (по аналогии с ценой)
-                quantity = int(input("Введите новое количество: "))
+                try:
+
+                    quantity = int(input("Введите новое количество: "))
+                    if quantity <= 0:
+                        print()
+                    else:
+                        break
+                except ValueError:
+                    print("Ошибка введите корректную цену")
                 item['quantity'] = quantity
                 print(f"Количество товара '{name}' успешно обновлено.")
 
@@ -78,9 +96,15 @@ def search_item(inventory):
 def display_inventory(inventory):
     """Выводит список всех товаров."""
     # TODO-3: если в списке нет товаров, выведите "Инвентарь пуст"
+<<<<<<< HEAD
+    inventory = []
+    if len(inventory) == 0:
+        print("инвентарь пуст")
+=======
     # if len(inventory) == 0:
     if not inventory:
         print("Инвентарь пуст")
+>>>>>>> 68b338dc43d0d6145b3c52e09c1e88e0928f2085
     else:
         print("Список товаров:")
         for i, item in enumerate(inventory):
@@ -138,7 +162,11 @@ def main():
         print("8. Выход.")
 
         choice = input("Выберите операцию: ")
+<<<<<<< HEAD
+        # TODO-0: реализуйте выбор пунктов меню, используя словарь menu_options = {}
+=======
         # TODO-0[complete]: реализуйте выбор пунктов меню, используя словарь menu_options = {}
+>>>>>>> 68b338dc43d0d6145b3c52e09c1e88e0928f2085
         menu_options = {
             '1': display_inventory,
             '2': add_item,

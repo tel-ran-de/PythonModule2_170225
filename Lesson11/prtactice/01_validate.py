@@ -3,6 +3,18 @@
 # Если какой-либо аргумент не удовлетворяет этому условию, декоратор должен выводить сообщение об ошибке.
 
 
+
+def validate_arguments(func):
+    def wrapper(a, b):
+        if a >= 0 and b >= 0:
+            return func(a, b)
+        else:
+
+            print("Error: negative arguments")
+            return None
+
+    return wrapper
+
 def validate_arguments(original_function):
     def wrapper_function(*args, **kwargs):
         # Код до вызова оригинальной функции
@@ -15,6 +27,7 @@ def validate_arguments(original_function):
         return result
 
     return wrapper_function
+
 
 
 @validate_arguments

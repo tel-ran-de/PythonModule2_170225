@@ -4,3 +4,5 @@
 
 numbers = [2.5, 13.6, 13, -22.4, -12.8, 6.7, 12.8, 21, 4, -22.1]
 a = float(input("a: "))
+sum_a = sum(x for x in numbers if x > a)
+print("сумма элементов больше a :", sum_a)

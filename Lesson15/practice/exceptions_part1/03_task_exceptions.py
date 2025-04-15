@@ -10,6 +10,15 @@ file_names = ['json_data01.json', 'json_data02.json', 'json_data03.json',
 path = Path("data")
 
 for file_name in file_names:
+
+    with open(path / file_name, "r", encoding="utf-8"
+              ) as file:
+        try:
+            data = json.load(file)
+        except json.JSONDecodeError:
+
+            print(f"Файл {file_name}")
+
     with open(path / file_name, "r", encoding="utf-8") as file:
         try:
             data = json.load(file)

@@ -9,3 +9,9 @@ log_entries = [
     "Another log",
     "Contact us at support@test.co.uk"
 ]
+
+email_show = list(filter(lambda log_entry: '@' in log_entry, log_entries))
+astring = email_show
+
+email_lower = list(map(lambda email: email.lower(), email_show))
+print(email_lower)
