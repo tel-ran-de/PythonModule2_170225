@@ -9,7 +9,7 @@ while i < len(nums) - 1:
     m = i
     j = i + 1
     while j < len(nums):
-        if nums[j] < nums[m]:
+        if nums[j] > nums[m]:
             m = j
         j += 1
     nums[i], nums[m] = nums[m], nums[i]
