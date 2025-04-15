@@ -10,9 +10,9 @@ print("before sort = ", nums)
 swapped = True
 while swapped:
     swapped = False
-    # print("*****")
+    print("*****")
     for i in range(len(nums) - 1):
-        # print("i = ", i)
+        print("i = ", i)
         if nums[i] > nums[i + 1]:
             # Меняем элементы
             nums[i], nums[i + 1] = nums[i + 1], nums[i]
