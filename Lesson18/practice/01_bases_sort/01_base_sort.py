@@ -8,6 +8,7 @@ step = 0
 while swapped:
     swapped = False
     print("*****")
+
 for i in range(len(nums) - 1 - step):
     print("i = ", i)
     if nums[i] > nums[i + 1]:
@@ -15,5 +16,14 @@ for i in range(len(nums) - 1 - step):
         nums[i], nums[i + 1] = nums[i + 1], nums[i]
         # Устанавливаем swapped в True для следующей итерации
     swapped = True
+
+    for i in range(len(nums) - 1 - step):
+        print("i = ", i)
+        if nums[i] > nums[i + 1]:
+            # Меняем элементы
+            nums[i], nums[i + 1] = nums[i + 1], nums[i]
+            # Устанавливаем swapped в True для следующей итерации
+            swapped = True
+
     step += 1
 print("after sort = ", nums)
