@@ -96,15 +96,15 @@ def search_item(inventory):
 def display_inventory(inventory):
     """Выводит список всех товаров."""
     # TODO-3: если в списке нет товаров, выведите "Инвентарь пуст"
-<<<<<<< HEAD
+
     inventory = []
     if len(inventory) == 0:
         print("инвентарь пуст")
-=======
+
     # if len(inventory) == 0:
     if not inventory:
         print("Инвентарь пуст")
->>>>>>> 68b338dc43d0d6145b3c52e09c1e88e0928f2085
+
     else:
         print("Список товаров:")
         for i, item in enumerate(inventory):
@@ -162,11 +162,11 @@ def main():
         print("8. Выход.")
 
         choice = input("Выберите операцию: ")
-<<<<<<< HEAD
+
         # TODO-0: реализуйте выбор пунктов меню, используя словарь menu_options = {}
-=======
+
         # TODO-0[complete]: реализуйте выбор пунктов меню, используя словарь menu_options = {}
->>>>>>> 68b338dc43d0d6145b3c52e09c1e88e0928f2085
+
         menu_options = {
             '1': display_inventory,
             '2': add_item,

@@ -92,7 +92,7 @@ def gen_list(size, at=-100, to=100) -> list:
     :return: список из size произвольных элементов в диапазоне at..to 
     """
     data = []
-    for in range(size):
+    for el in range(size):
         random.randint(at, to)
         data.append(el)
 
