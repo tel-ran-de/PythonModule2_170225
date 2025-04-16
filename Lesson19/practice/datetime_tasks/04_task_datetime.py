@@ -5,7 +5,9 @@
 
 from datetime import date, timedelta
 
+
 def get_tomorrow_date(today: date) -> date:
     # Допишите код здесь
     pass
 
+# TODO: напишите тесты для функции, используя оператор assert

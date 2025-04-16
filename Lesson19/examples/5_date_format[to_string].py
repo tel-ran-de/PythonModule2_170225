@@ -15,3 +15,7 @@ print(now.strftime("%I:%M %p"))  # Час:Минута AM/PM (10:45 PM)
 # Комбинированные форматы
 print(now.strftime("%Y-%m-%d %H:%M:%S"))
 print(now.strftime("%c"))  # Предпочтительное представление даты и времени
+
+# Подробнее про форматирование можно почитать
+# тут: https://www.programiz.com/python-programming/datetime/strftime
+# и тут: https://www.w3schools.com/python/python_datetime.asp
