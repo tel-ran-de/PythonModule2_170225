@@ -7,8 +7,10 @@ from random import randint
 # 4. Второй минимум поместить на второе место списка. Второй элемент при этом перемещается на освободившееся место.
 # 5. Продолжать выполнять поиск и обмен, пока не будет достигнут конец списка.
 
+#       0  1  2   3  4   5  6
 nums = [5, 2, -1, 8, 4, -4, 7]
 print("before sort = ", nums)
+
 i = 0
 while i < len(nums) - 1:
     m = i
@@ -19,4 +21,5 @@ while i < len(nums) - 1:
         j += 1
     nums[i], nums[m] = nums[m], nums[i]
     i += 1
+
 print("after sort = ", nums)

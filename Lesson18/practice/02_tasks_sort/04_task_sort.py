@@ -5,5 +5,12 @@
 # В примере ниже, два самых больших по модулю числа это: -22.4 и 21.1. Они самые большие по модулю, а их сумма = -1.3
 
 numbers = [-2.5, 13.6, -13, -22.4, -12.8, -6.7, 12.8, -21, 4, 21.1, 0]
+<<<<<<< HEAD
 numbers.sort(key=abs, reverse=True)
 print(sum(numbers[:5]))
+=======
+
+numbers.sort(key=abs, reverse=True)
+
+print(sum(numbers[:5]))
+>>>>>>> 288fbf03984cacbe649f811f69f8e412f654de58
