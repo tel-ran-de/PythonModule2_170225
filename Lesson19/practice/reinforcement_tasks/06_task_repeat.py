@@ -6,3 +6,5 @@
 
 messages = ["Hello world!", "Important INFO", "debug message", "User Information", "USER logged in"]
 keyword = "info"
+
+"Important INFO".lower().find(keyword.lower()) == -1

@@ -4,8 +4,18 @@
 # (например, "понедельник", "вторник" и т.д.) с учетом текущей даты.
 
 from datetime import date
+from datetime import datetime, date, time
 
 
 def get_today_day_name(today: date) -> str:
     """Возвращает название сегодняшнего дня недели на русском языке."""
-    pass
+
+    # Получение текущей даты и времени
+    now = datetime.now()
+    print(f"Текущая дата и время: {now}")
+    print(f"Только дата: {now.date()}")
+    print(now.strftime("%a, %d %b %y"))  # Сокр.ДеньНедели, День Сокр.Месяца Год (Thu, 26 Oct 23)
+    
+
+get_today_day_name(date.today())
+# Получение текущей даты и времени
