@@ -9,6 +9,7 @@ from datetime import datetime, date, time
 
 def get_today_day_name(today: date) -> str:
     """Возвращает название сегодняшнего дня недели на русском языке."""
+<<<<<<< HEAD
 
     # Получение текущей даты и времени
     now = datetime.now()
@@ -19,3 +20,11 @@ def get_today_day_name(today: date) -> str:
 
 get_today_day_name(date.today())
 # Получение текущей даты и времени
+=======
+    day_names = ["пн", "вт", "ср", "чт", "пт", "сб", "вс"]
+    day_index = today.weekday()
+    return day_names[day_index]
+
+our_data = date(2025, 4, 13)
+print(get_today_day_name(our_data))
+>>>>>>> 313dbff6d8a5cacc923f6a78edd0509c9d16bad3

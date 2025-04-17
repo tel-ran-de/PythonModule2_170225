@@ -9,9 +9,16 @@ def natural_numbers(n: int):
     """
     for i in range(1, n + 1):
         yield i
+<<<<<<< HEAD
     # Допишите ваш код здесь
 
 
 # Пример использования:
 for num in natural_numbers(5):
     print(num)  # Ожидаемый вывод: 1 2 3 4 5
+=======
+
+# Пример использования:
+for num in natural_numbers(5):
+    print(num) # Ожидаемый вывод: 1 2 3 4 5
+>>>>>>> 313dbff6d8a5cacc923f6a78edd0509c9d16bad3
