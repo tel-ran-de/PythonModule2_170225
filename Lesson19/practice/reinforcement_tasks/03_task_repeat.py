@@ -16,8 +16,9 @@ def prime_numbers_up_to(n):
     """
     Генератор, выдающий простые числа до n.
     """
-    # Допишите ваш код здесь
-    pass
+    for i in range(1, n + 1):
+        if is_prime(i):
+            yield i
 
 # Пример использования:
 # for prime in prime_numbers_up_to(20):

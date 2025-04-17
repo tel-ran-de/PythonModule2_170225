@@ -5,4 +5,8 @@
 # Если наивысших оценок несколько, вывести имена
 
 students = [('Alice', 85), ('Bob', 92), ('Charlie', 78), ('David', 92)]
-# Ожидаемый результат: 'Bob' и 'David
+max_points = max(students, key=lambda x: x[1])[1]
+
+for student in students:
+    if student[1] == max_points:
+        print(student)

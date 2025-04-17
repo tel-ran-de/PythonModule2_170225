@@ -7,9 +7,9 @@ def natural_numbers(n: int):
     """
     Генератор, выдающий последовательность натуральных чисел от 1 до n.
     """
-    # Допишите ваш код здесь
-    pass
+    for i in range(1, n + 1):
+        yield i
 
 # Пример использования:
-# for num in natural_numbers(5):
-#     print(num) # Ожидаемый вывод: 1 2 3 4 5
+for num in natural_numbers(5):
+    print(num) # Ожидаемый вывод: 1 2 3 4 5
