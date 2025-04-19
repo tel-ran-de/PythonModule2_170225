@@ -19,10 +19,8 @@ def prime_numbers_up_to(n):
     for i in range(1, n + 1):
         if is_prime(i):
             yield i
-<<<<<<< HEAD
+
     return
-=======
->>>>>>> 313dbff6d8a5cacc923f6a78edd0509c9d16bad3
 
 # Пример использования:
 # for prime in prime_numbers_up_to(20):

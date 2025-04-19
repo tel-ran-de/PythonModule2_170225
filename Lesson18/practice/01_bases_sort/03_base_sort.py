@@ -3,7 +3,7 @@ def benchmark(iters=1):
     def actual_decorator(func):
         import time
 
-<<<<<<< HEAD
+
 
 def bubble_sort(nums):
     nums = []
@@ -15,7 +15,7 @@ def bubble_sort(nums):
                 nums[i], nums[i + 1] = nums[i + 1], nums[i]
                 swapped = True
     return
-=======
+
         def wrapper(*args, **kwargs):
             total = 0
             for i in range(iters):
@@ -25,15 +25,15 @@ def bubble_sort(nums):
                 total = total + (end - start)
             print(f'[*] Среднее время выполнения: {total / iters} секунд.')
             return return_value
->>>>>>> 288fbf03984cacbe649f811f69f8e412f654de58
+
 
         return wrapper
 
-<<<<<<< HEAD
+
 bubble_sort()
-=======
+
     return actual_decorator
->>>>>>> 288fbf03984cacbe649f811f69f8e412f654de58
+
 
 # @benchmark(2)
 def sort_choice(nums: list) -> None:
@@ -48,7 +48,7 @@ def sort_choice(nums: list) -> None:
         nums[i], nums[m] = nums[m], nums[i]
         i += 1
 
-<<<<<<< HEAD
+
 def sort_choice(nums: list) -> None:
     nums = [5, 2, -1, 8, 4, -4, 7]
 
@@ -68,7 +68,7 @@ def sort_choice(nums: list) -> None:
 sort_choice()
 
 
-=======
+
 # @benchmark(2)
 def bubble_sort(nums: list) -> None:
     swapped = True
@@ -80,7 +80,7 @@ def bubble_sort(nums: list) -> None:
                 swapped = True
 
 @benchmark(2)
->>>>>>> 288fbf03984cacbe649f811f69f8e412f654de58
+
 def quick_sort(nums):
     def partition(nums, low, high):
         # Выбираем средний элемент в качестве опорного
@@ -105,7 +105,7 @@ def quick_sort(nums):
             # элемент с индексом j (справа от опорного), меняем их местами
             nums[i], nums[j] = nums[j], nums[i]
 
-<<<<<<< HEAD
+
         # Создадим вспомогательную функцию, которая вызывается рекурсивно
         def _quick_sort(items, low, high):
             if low < high:
@@ -131,7 +131,7 @@ quick_sort()
 
 # Напишите функцию для заполнения списка случайными числами
 def gen_list(size, at=-100, to=100) -> list:
-=======
+
     # Создадим вспомогательную функцию, которая вызывается рекурсивно
     def _quick_sort(items, low, high):
         if low < high:
@@ -149,7 +149,7 @@ def python_sort(nums):
 
 # Напишите функцию для заполнения списка случайными числами
 def gen_list(size: int, at: int = -100, to: int = 100) -> list:
->>>>>>> 288fbf03984cacbe649f811f69f8e412f654de58
+
     import random
     """
     :param size: кол-во элементов списка
@@ -158,17 +158,16 @@ def gen_list(size: int, at: int = -100, to: int = 100) -> list:
     :return: список из size произвольных элементов в диапазоне at..to 
     """
     data = []
-<<<<<<< HEAD
     for el in range(size):
         random.randint(at, to)
         data.append(el)
-=======
+
     for i in range(size):
         el = random.randint(at, to)
         data.append(el)
     return data
 
->>>>>>> 288fbf03984cacbe649f811f69f8e412f654de58
+
 
 
 gen_list(13, 33, 44)
