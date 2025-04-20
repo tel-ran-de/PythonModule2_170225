@@ -33,5 +33,23 @@ rows = 2
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+def print_rhombus_outline(rows: int):
+  for i in range(rows - 1, -1, -1):
+   spaces_outside = rows - 1 - i
+   spaces =  2 * i + 1
+   if i != 0:
+    print(" " * spaces_outside + "*" * spaces)
+
+  for i in range(rows):
+   spaces_outside = rows - 1 - i
+   if i == 0:
+    print(" " * spaces_outside + "*")
+   else:
+    spaces = 2 * i + 1
+    print(" " * spaces_outside + "*" * spaces)
+
+
+rows = int(input("2 <= rows <= 15: "))
+
+print_rhombus_outline(rows)
 ```
