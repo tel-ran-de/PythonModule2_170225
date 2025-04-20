@@ -30,5 +30,20 @@ height = 3
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+def print_rhombus_outline(height: int):
+    for i in range(height):
+        spaces_outside = height - 1 - i
+        if i == 0:
+            print( " "* spaces_outside + "/" + "\\") #
+        elif i == height - 1 :
+            spaces_inside = 2 * i
+            print("/" + "_" * spaces_inside + "\\")
+        else:
+            spaces_inside = 2 * i
+            print(" "* spaces_outside + "/" + " " * spaces_inside + "\\")
+
+
+height = int(input("2 <= height <= 15: "))
+
+print_rhombus_outline(height)
 ```
