@@ -20,7 +20,17 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+n = int(input("количество уровней в пирамиде: "))
+lines_sum = 0
+for i in range(n):
+    lines_sum += sum(list(i+1 for _ in range(i + 1)))
+    # print(list(i+1 for _ in range(i + 1)))
+    # print(f"sum = {sum(list(i+1 for _ in range(i + 1)))}")
+
+print(f"lines_sum = {lines_sum}")
+
+# ChatGPT
+print(f"ChatGPT line_sum = {sum(i * i for i in range(1, n + 1))}")
 ```
 
 ---
