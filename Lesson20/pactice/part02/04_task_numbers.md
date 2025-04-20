@@ -16,7 +16,20 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+def is_ideal_number(n: int) -> bool:
+    num_sum = [ i  for i in range(1, n + 1) if not i == n and n % i == 0]
+    return sum(num_sum) == n
+    # if sum(num_sum) == n:
+    #     return True
+    # return False
+
+assert is_ideal_number(4) == False     # Нет
+assert is_ideal_number(6) == True      # Да
+assert is_ideal_number(14) == False    # Нет
+assert is_ideal_number(22) == False    # Нет
+assert is_ideal_number(28) == True     # Да
+assert is_ideal_number(100) == False   # Нет
+assert is_ideal_number(496) == True    # Да
 ```
 
 ---
