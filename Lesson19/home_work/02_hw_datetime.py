@@ -6,8 +6,29 @@
 from datetime import datetime
 
 def is_valid_date_format(date_string: str, format_string: str):
-    # Допишите код здесь
-    return False
+    try:
+        datetime.strptime(date_string, format_string)
+        return True
+    except ValueError:
+        return False
+
+
+# Пустые строки:
+assert is_valid_date_format("", "%Y-%m-%d") == False
+assert is_valid_date_format("   ", "%Y-%m-%d") == False
+
+# Строка с текстом вместо даты:
+assert is_valid_date_format("дата: 2025-05-10", "%Y-%m-%d") == False
+assert is_valid_date_format("10 мая 2025", "%d-%m-%Y") == False
+
+# Нестандартные символы:
+assert is_valid_date_format("2025/05/10", "%Y-%m-%d") == False  # не тот разделитель
+assert is_valid_date_format("2025-05-10!", "%Y-%m-%d") == False  # лишний символ
+
+# Числа вне диапазона:
+assert is_valid_date_format("2025-00-10", "%Y-%m-%d") == False  # месяц 0
+assert is_valid_date_format("2025-12-00", "%Y-%m-%d") == False  # день 0
+assert is_valid_date_format("2025-02-29", "%Y-%m-%d") == False  # 2025 не високосный
 
 # Пример использования
 date_str1 = "2025-05-10"
