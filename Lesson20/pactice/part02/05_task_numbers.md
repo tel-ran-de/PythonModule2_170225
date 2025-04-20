@@ -16,7 +16,21 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+def count_ideal_numbers_in_range(start: int, end: int) -> int:
+    ideal_count = 0
+    for n in range(start, end + 1):
+        divisors = [i for i in range(1, n) if n % i == 0]
+        print(f"divisors = {divisors}")
+        if sum(divisors) == n:
+            ideal_count += 1
+            print(f"{n} — совершенное число")
+
+    print(f"Количество совершенных чисел в диапазоне от {start} до {end}: {ideal_count}")
+    return ideal_count
+
+
+# Пример вызова:
+count_ideal_numbers_in_range(4, 7)
 ```
 
 ---
