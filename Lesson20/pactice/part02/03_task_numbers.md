@@ -16,7 +16,34 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+def list_divisors(n: int):
+    if n <= 1:
+        return "не считается простым"
+    is_prime = False
+    l_divisors = []
+    for i in range(1, n + 1):
+        if not i == 1 and not i == n:
+            if n % i == 0:
+                # print(i)
+                l_divisors.append(i)
+                is_prime = True
+
+    if is_prime == False:
+        return "Число простое"
+
+    return l_divisors
+
+n = int(input("целое положительное число: "))
+
+print(f"{n} делители {list_divisors(n)}")
+
+assert list_divisors(4) == [2]
+assert list_divisors(8) == [2, 4]
+assert list_divisors(11) == "Число простое"
+assert list_divisors(14) == [2, 7]
+assert list_divisors(20) == [2, 4, 5, 10]
+assert list_divisors(1) == "не считается простым"
+assert list_divisors(2) == "Число простое"
 ```
 
 ---
