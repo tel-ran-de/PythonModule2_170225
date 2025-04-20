@@ -15,7 +15,19 @@
 ### Решение задачи
 
 ```python
-# TODO: you code here...
+amoebas = 1
+n = int(input("целое неотрицательное число: "))
+if n == 0:
+    print(f"количество амеб за {n} минут: {amoebas} ")
+else:
+    for i in range(n):
+        amoebas *= 2
+    print(f"количество амеб за {n} минут: {amoebas} ")
+
+print("---v2--")
+
+amoebas = 2 ** n
+print(f"количество амеб за {n} минут: {amoebas}")
 ```
 ---
 
