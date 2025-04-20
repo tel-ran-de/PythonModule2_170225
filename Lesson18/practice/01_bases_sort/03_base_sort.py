@@ -15,6 +15,7 @@ def bubble_sort(nums):
                 nums[i], nums[i + 1] = nums[i + 1], nums[i]
                 swapped = True
     return
+<<<<<<< HEAD
 
         def wrapper(*args, **kwargs):
             total = 0
@@ -26,29 +27,25 @@ def bubble_sort(nums):
             print(f'[*] Среднее время выполнения: {total / iters} секунд.')
             return return_value
 
+=======
+>>>>>>> abc6f5ff0e2b20d44f736240634f8321d0bfa1a5
 
-        return wrapper
 
+<<<<<<< HEAD
 
 bubble_sort()
 
     return actual_decorator
 
-
-# @benchmark(2)
-def sort_choice(nums: list) -> None:
-    i = 0
-    while i < len(nums) - 1:
-        m = i
-        j = i + 1
-        while j < len(nums):
-            if nums[j] < nums[m]:
-                m = j
-            j += 1
-        nums[i], nums[m] = nums[m], nums[i]
-        i += 1
+=======
+bubble_sort()
+>>>>>>> abc6f5ff0e2b20d44f736240634f8321d0bfa1a5
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> abc6f5ff0e2b20d44f736240634f8321d0bfa1a5
 def sort_choice(nums: list) -> None:
     nums = [5, 2, -1, 8, 4, -4, 7]
 
@@ -68,6 +65,35 @@ def sort_choice(nums: list) -> None:
 sort_choice()
 
 
+<<<<<<< HEAD
+=======
+        def wrapper(*args, **kwargs):
+            total = 0
+            for i in range(iters):
+                start = time.time()
+                return_value = func(*args, **kwargs)
+                end = time.time()
+                total = total + (end - start)
+            print(f'[*] Среднее время выполнения: {total / iters} секунд.')
+            return return_value
+
+        return wrapper
+
+    return actual_decorator
+
+# @benchmark(2)
+def sort_choice(nums: list) -> None:
+    i = 0
+    while i < len(nums) - 1:
+        m = i
+        j = i + 1
+        while j < len(nums):
+            if nums[j] < nums[m]:
+                m = j
+            j += 1
+        nums[i], nums[m] = nums[m], nums[i]
+        i += 1
+>>>>>>> abc6f5ff0e2b20d44f736240634f8321d0bfa1a5
 
 # @benchmark(2)
 def bubble_sort(nums: list) -> None:
@@ -158,16 +184,25 @@ def gen_list(size: int, at: int = -100, to: int = 100) -> list:
     :return: список из size произвольных элементов в диапазоне at..to 
     """
     data = []
+<<<<<<< HEAD
     for el in range(size):
         random.randint(at, to)
         data.append(el)
+=======
+
+    for in range(size):
+        random.randint(at, to)
+>>>>>>> abc6f5ff0e2b20d44f736240634f8321d0bfa1a5
 
     for i in range(size):
         el = random.randint(at, to)
         data.append(el)
     return data
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> abc6f5ff0e2b20d44f736240634f8321d0bfa1a5
 
 
 gen_list(13, 33, 44)
