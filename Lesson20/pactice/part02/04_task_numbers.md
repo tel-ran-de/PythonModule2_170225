@@ -15,11 +15,23 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
+## "Совершенное число"
 
----
+num = int(input("целое положительно число : "))
+if num < 0:
+    print(" число должно быть положительное ! ")
+    num = int(input("Целое положительное число :"))
+else:
+    print("дано : ", num)
+sum_divisors = 0
+for i in range(1, num // 2 + 1):
+    if num % i == 0:
+        sum_divisors += i
+
+if sum_divisors == num:
+    print("Да")
+else:
+    print("Нет")
 
 ### Данные для самопроверки
 
