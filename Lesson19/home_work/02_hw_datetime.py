@@ -5,9 +5,13 @@
 
 from datetime import datetime
 
-def is_valid_date_format(date_string: str, format_string: str):
-    # Допишите код здесь
-    return False
+def is_valid_date_format(date_string: str, format_string: str)
+    try:
+        datetime.strptime(date_string, format_string)
+        return True
+    except ValueError:
+        
+        return False
 
 # Пример использования
 date_str1 = "2025-05-10"
