@@ -19,9 +19,15 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
+## "Пирамида"
+
+
+story = int(input("Количество рядов :"))
+story_sum = 0
+for i in range(1, story + 1):
+    story_sum += i * i
+    print(f"{story_sum} кирпичей ")
+
 
 ---
 
