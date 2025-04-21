@@ -14,10 +14,32 @@
 
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
----
+## "Амеба"
+
+
+def num():
+    while True:
+        minutes = int(input("min : "))
+        if minutes > -1:
+            return minutes
+        else:
+            print("Число должно быть положительное!")
+
+
+# Амебы
+
+def am(minutes):
+    if minutes == 0:
+        return 1
+    periods = (minutes // 1)
+    return 2 ** periods
+
+
+time = num()
+amoebas = am(time)
+
+print(f"{amoebas} ам. за {time} мин.")
+
 
 ### Данные для самопроверки
 
