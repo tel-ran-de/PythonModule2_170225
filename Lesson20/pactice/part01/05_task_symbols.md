@@ -31,6 +31,17 @@ n = 3
 ```
 ### Решение задачи
 
-```python
-# TODO: you code here...
-```
+## "Диагонали символами"
+
+
+n = int(input("n : "))
+
+if 3 < n < 20:
+    for i in range(n):
+        line = [" "] * n
+        line[i] = "#"
+
+        line[n - 1 - i] = "#"
+        print("".join(line))
+else:
+    print("n должно быть между 4 и 19")
