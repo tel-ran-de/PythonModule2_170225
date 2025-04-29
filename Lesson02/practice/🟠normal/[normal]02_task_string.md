@@ -18,6 +18,12 @@
 
 ```python
 # TODO: you code here...
+text = input("строка:")
+
+if text.startswith("id:") and text[3:].isdigit():
+    print("да")
+else:
+    print("нет")
 ```
 
 ---
